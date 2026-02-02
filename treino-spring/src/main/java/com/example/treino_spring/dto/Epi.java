@@ -18,12 +18,10 @@ public class Epi {
     private Long idEpi;
 
     @NotBlank(message = "Nome não pode ser nulo")
-    @Column(nullable = false,unique = true)
     @Size(max = 120,message ="Nome não pode ultrapassar os 120 caracteres")
     private String nome;
 
     @NotBlank
-    @Column(nullable = false)
     @Size(max = 80,message = "O tipo de epi não pode ultrapassar os 80 caracteres")
     private String tipoEpi;
 
@@ -32,14 +30,12 @@ public class Epi {
     private String descricao;
 
     @NotBlank
-    @Column(nullable = false)
     @Size(max = 20,message = "Tamanho não pode ultrapassar os 20 caracteres")
     private String tamanho;
 
     private LocalDate validade;
 
     @NotBlank
-    @Column(nullable = false)
     @Size(max = 20,message = "Situação não pode ultrapssar os 20 caracteres")
     private String situacao;
 
