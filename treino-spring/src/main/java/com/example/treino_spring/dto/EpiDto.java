@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Epi {
+public class EpiDto {
 
     private Long idEpi;
 

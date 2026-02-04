@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Colaborador {
+public class ColaboradorDto {
 
     private Long idColaborador;
 
