@@ -1,6 +1,5 @@
 package com.example.treino_spring.dto;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -12,35 +11,30 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@ToString
-
 public class Colaborador {
 
-
     private Long idColaborador;
-
 
     @NotBlank(message = "Nome não pode ser nulo")
     @Size(max = 120,message = "Nome não pode ultrapassar os 120 caracteres")
     private String nome;
 
-    @NotBlank
+    @NotBlank(message = "CPF não pode ser nulo")
     @Size(message ="CPF não pode ultrapassar os 11 caracteres",max = 11,min = 11)
     private String cpf;
 
-    @NotBlank
+    @NotBlank(message = "Cargo não pode ser nulo")
     @Size(max = 80,message = "Cargo não pode ultrapassar os 80 caracteres")
     private String cargo;
 
-    @NotBlank
+    @NotBlank(message = "Setor não pode ser nulo")
     @Size(max = 80,message = "Setor não pode ultrapassar os 80 caracteres")
     private String setor;
 
-    @NotNull
+    @NotNull(message = "Data de admissão não pode ser nula")
     @PastOrPresent(message = "Data de admissão não pode ser futura")
-    private LocalDate dataadmissao;
+    private LocalDate dataAdmissao;
 
-    private boolean statusativo;
-
+    private boolean statusAtivo;
 
 }
